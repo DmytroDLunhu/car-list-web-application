@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Car list</title>
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+
+</head>
+<body>
+<div class="conteiner">
+    <div class="row">
+        <h1> List of cars </h1>
+    </div>
+    <table class="table table-striped table-bordered">
+        <thead class="table-dark">
+        <tr>
+            <th>Mark</th>
+            <th>Model</th>
+            <th>Color</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="cars: ${cars}">
+            <td th:each="${car.mark}"></td>
+            <td th:each="${car.model}"></td>
+            <td th:each="${car.color}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
